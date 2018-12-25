@@ -1,13 +1,13 @@
 # wiki_scrapy
 
-wiki_scrapy is a web crawler that models the behavior wikipedia article links leading to wikipedia's philosophy page. This project models the following
+wiki_scrapy is a web crawler that models the behavior wikipedia article links leading to wikipedia's philosophy page. This project models the following:
 
-  - The percentage of pages that lead to philosophy?
-  - The distribution of path lengths for for links that eventually make it to Philosophy
+  - The percentage of pages that lead to philosophy
+  - The distribution of path lengths for links that eventually make it to Philosophy
 
 ### Methodology
 
-The webscraper starts from a random Wikipedia article (example: http://en.wikipedia.org/wiki/Art) clicks on the first non-italicized link not surrounded by parentheses or brackets in the main text. It'll then redirect to that link and continue until it reaches Philosophy or until it fails to do. Failure in this case is defined as the following:
+The webscraper starts from a random Wikipedia article (example: http://en.wikipedia.org/wiki/Art) and clicks on the first non-italicized link not surrounded by parentheses or brackets in the main text. It then redirects to that link and continue until it reaches Philosophy or until it fails to do so. Failure in this case is defined as the following:
 * Reaching a page with an error status code i.e. 404
 * Encounterning a loop
 * Reaching a web page that has no links in the main text area
